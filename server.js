@@ -21,7 +21,7 @@ connectDB()
 
 
 // Import Route files
-// const roles = require('./routes/roleRoutes')
+const aiResponse = require('./routes/aiResponseRoutes')
 
 
 // using JSON parser
@@ -33,7 +33,7 @@ app.use(cors())
 
 
 // Mount routers
-// app.use('/api/v1/roles', roles)
+app.use('/api/v1/ai-response', aiResponse)
 
 app.get('/', (req, res) => {
     res.json({

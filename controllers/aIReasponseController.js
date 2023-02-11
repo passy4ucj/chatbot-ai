@@ -47,7 +47,7 @@ const getAIResponse = asyncHandler(async (req, res, next) => {
 
     const aiResponse = await AIResponse.find({ messageCode })
 
-    if(messages) {
+    if(aiResponse) {
         res.status(200).json({
             success: true,
             data: aiResponse
